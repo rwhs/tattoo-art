@@ -1,12 +1,13 @@
 import React, { useState, Fragment } from 'react';
-import { Redirect } from 'react-router-dom';
+import { Redirect, Link } from 'react-router-dom';
 import { makeStyles } from '@material-ui/core/styles';
-import { Paper, Grid, Typography } from '@material-ui/core';
+import { Paper, Grid, Typography, Button } from '@material-ui/core';
 
 import { Header } from "./Header";
 import { SignUpButton } from "./SignUpButton";
 import { HomePagePaper } from "./HomePagePaper";
 import { CreateContestRedirect } from "./CreateContestRedirect";
+import { CreateContestButton } from "./CreateContestButton";
 
 
 const useStyles = makeStyles(theme => ({
@@ -37,7 +38,8 @@ export default function HomePage() {
       {redirect && <Redirect to='/create-contest'/>}
       <Header />
       <Typography className={classes.homePageHeading} variant="h2" justify="left">Welcome to Tattoo Art!</Typography>
-      <CreateContestRedirect onClick={() => setRedirect(true)}/>
+      {/* <CreateContestRedirect onClick={() => setRedirect(true)}/> */}
+      <CreateContestButton />
       <Grid container direction="column">
         <HomePagePaper />
       </Grid>     

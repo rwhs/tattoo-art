@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from 'react-router-dom';
 import { makeStyles, Button, Typography, Grid } from "@material-ui/core";
 
 const useStyles = makeStyles(theme => ({
@@ -23,7 +24,7 @@ export function CreateContestButton(props) {
     <div>
       <Grid container justify="center">
         <div className={classes.buttonContainer}>
-          <Button type={props.type} className={classes.button} variant="contained" onClick={props.onClick}>
+          <Button type={props.type} component={ Link } to="/create-contest" className={classes.button} variant="contained" onClick={props.onClick}>
             <Typography className={classes.root}>
               Create Contest
       		  </Typography>

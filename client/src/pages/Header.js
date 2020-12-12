@@ -1,5 +1,6 @@
 import React from "react";
-import { AppBar, Toolbar, Typography, makeStyles, Button } from '@material-ui/core';
+import { Link } from 'react-router-dom';
+import { AppBar, Toolbar, Typography, makeStyles } from '@material-ui/core';
 import { SignUpButton } from "./SignUpButton";
 
 const useStyles = makeStyles(theme => ({
@@ -9,6 +10,8 @@ const useStyles = makeStyles(theme => ({
     marginLeft: theme.spacing(5),
     fontFamily: theme.fontFamily,
     letterSpacing: "0.3em",
+    color: "inherit",
+    textDecoration: "none"  
   },
   AppBar: {
     zIndex: theme.zIndex.drawer + 1,
@@ -24,11 +27,12 @@ export function Header(props) {
     <div>
       <AppBar position="fixed" className={classes.AppBar}>
         <Toolbar>
-          <Typography variant="h6" className={classes.title}>
+          <Typography variant="h6" className={classes.title} component={ Link } to="/">
             TATTOO ART
           </Typography>
           {props.children}
           <SignUpButton />
+          {localStorage.getItem('token')}
         </Toolbar>
       </AppBar>
       <div className={classes.offset} />

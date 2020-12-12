@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { makeStyles, Button, Typography } from '@material-ui/core';
 
 const useStyles = makeStyles(theme => ({
@@ -24,7 +25,7 @@ export function SignUpButton() {
 
   return (
     <div className={classes.buttonContainer}>
-      <Button className={classes.button} color="inherit" variant="contained">
+      <Button className={classes.button} component={ Link } to="/signup" color="inherit" variant="contained">
         <Typography className={classes.title}>
           Sign Up
         </Typography>

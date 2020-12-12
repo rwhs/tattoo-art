@@ -35,9 +35,7 @@ export default function Signup() {
 
   return (
     <Fragment>
-      <Header>
-        <SignUpButton />
-      </Header>
+      <Header />
       <SignUpPaper>
         <Grid container direction="column" alignContent="center">
           <BasicTextField
