@@ -1,17 +1,21 @@
 import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
-import { Button, Typography } from '@material-ui/core';
+import { makeStyles, Button, Typography } from '@material-ui/core';
 
 const useStyles = makeStyles(theme => ({
   button: {
-    
-  },
-  input: {
-    display: 'none',
+    backgroundColor: "white",
+    borderRadius: "0",
+    color: "black",
+    width: "6rem",
+    padding: theme.spacing(1.5, 2),
   },
   title: {
     fontFamily: theme.fontFamily,
-    fontSize: 10
+    fontSize: 12,
+  },
+  buttonContainer: {
+    marginLeft: "auto",
+    marginRight: "auto",
   }
 }));
 
@@ -19,10 +23,12 @@ export function SignUpButton() {
   const classes = useStyles();
 
   return (
-    <Button variant="outlined" color="inherit" className={classes.button}>
-      <Typography className={classes.title} variant="button">
-        Sign Up
-      </Typography>
-    </Button>
+    <div className={classes.buttonContainer}>
+      <Button className={classes.button} color="inherit" variant="contained">
+        <Typography className={classes.title}>
+          Sign Up
+        </Typography>
+      </Button>
+    </div>
   )
 }

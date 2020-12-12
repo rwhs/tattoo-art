@@ -18,7 +18,7 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-export function SignInButton(props) {
+export function LoginPageButton(props) {
   const classes = useStyles();
 
   return (
@@ -27,7 +27,7 @@ export function SignInButton(props) {
         <div className={classes.buttonContainer}>
           <Button type={props.type} className={classes.button} variant="contained">
             <Typography className={classes.root}>
-              Sign In
+              Log In
       		  </Typography>
           </Button>
         </div>

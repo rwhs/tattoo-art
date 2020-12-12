@@ -35,9 +35,7 @@ export default function HomePage() {
   return (
     <Fragment>
       {redirect && <Redirect to='/create-contest'/>}
-      <Header>
-        <SignUpButton />
-      </Header>
+      <Header />
       <Typography className={classes.homePageHeading} variant="h2" justify="left">Welcome to Tattoo Art!</Typography>
       <CreateContestRedirect onClick={() => setRedirect(true)}/>
       <Grid container direction="column">

@@ -1,5 +1,6 @@
 import React from "react";
-import { AppBar, Toolbar, Typography, makeStyles } from '@material-ui/core';
+import { AppBar, Toolbar, Typography, makeStyles, Button } from '@material-ui/core';
+import { SignUpButton } from "./SignUpButton";
 
 const useStyles = makeStyles(theme => ({
   title: {
@@ -27,6 +28,7 @@ export function Header(props) {
             TATTOO ART
           </Typography>
           {props.children}
+          <SignUpButton />
         </Toolbar>
       </AppBar>
       <div className={classes.offset} />

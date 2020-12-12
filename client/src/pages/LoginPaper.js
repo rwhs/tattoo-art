@@ -18,12 +18,12 @@ const useStyles = makeStyles(theme => ({
   header: {
     marginBottom: 30
   },
-  signInText: {
+  LoginText: {
     fontWeight: 600
   }
 }));
 
-export function SignInPaper(props) {
+export function LoginPaper(props) {
   const classes = useStyles();
 
   return (
@@ -31,8 +31,8 @@ export function SignInPaper(props) {
       <Grid item xs={9} md={7} lg={4} className={classes.position}>
         <Paper className={classes.paper}>
           <Grid item className={classes.header}>
-            <Typography variant="h4" className={classes.signInText} align="center">
-              Sign In
+            <Typography variant="h4" className={classes.LoginText} align="center">
+              Log In
             </Typography>
           </Grid>
           {props.children}

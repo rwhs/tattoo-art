@@ -7,9 +7,7 @@ export default function CreateContest() {
 
   return (
     <Fragment>
-      <Header>
-        <SignUpButton />
-      </Header>
+      <Header />
       <CreateContestPaper />
     </Fragment>
   )

@@ -1,9 +1,8 @@
 import React, { Component } from "react";
 import { Header } from "./Header";
-import { SignUpButton } from "./SignUpButton";
-import { SignInPaper } from "./SignInPaper";
+import { LoginPageButton } from "./LoginPageButton";
+import { LoginPaper } from "./LoginPaper";
 import { BasicTextField } from "./TextField";
-import { SignInButton } from "./SignInButton";
 import { Grid, Typography } from "@material-ui/core";
 
 class Login extends Component {
@@ -63,10 +62,8 @@ class Login extends Component {
   render() {
     return (
       <div>
-        <Header>
-          <SignUpButton />
-        </Header>
-        <SignInPaper>
+        <Header />
+        <LoginPaper>
           <Grid container direction="column" alignContent="center">
             <form onSubmit={this.handleFormSubmit}>
               <BasicTextField
@@ -88,11 +85,11 @@ class Login extends Component {
                   </a>
                 </Typography>
               </Grid>
-              <SignInButton type="submit" />
+              <LoginPageButton type="submit" />
             </form>
             <p>{this.state.error}</p>
           </Grid>
-        </SignInPaper>
+        </LoginPaper>
       </div>
     )
   }
